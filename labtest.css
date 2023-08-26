@@ -9,7 +9,6 @@ li {
   padding: 0;
 }
 
-
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
@@ -56,17 +55,6 @@ nav a {
   color: #333;
 }
 
-
-
-
-
-/* Hero section 
-.hero {
-  text-align: center;
-  padding: 100px 0;
-  background-color: #DEFCF9;
-} */
-
 .hero h1 {
   font-size: 50px;
   margin-bottom: 10px;
@@ -87,9 +75,6 @@ nav a {
   border-radius: 7px;
   font-weight: bold;
   font-size: 1.2rem;
-
-
-
 }
 
 .gradient-background {
