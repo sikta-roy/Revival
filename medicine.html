@@ -2,6 +2,8 @@
 <html>
 
 <head>
+  <link rel="icon" href="favicon1.ico" type="image/x-icon">
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Order Medicines</title>
@@ -9,7 +11,22 @@
     integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   <link href="medicine.css" rel="stylesheet" type="text/css" />
   <style>
-      
+
+    .popup-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  .popup-buttons {
+    margin-top: 10px;
+    text-align: center;
+  }
 
       @media (min-width: 768px) {
         .bd-placeholder-img-lg {
@@ -61,7 +78,16 @@
 </head>
 
 
- <body class="bg-body-tertiary">    
+ <body class="bg-body-tertiary">  
+   
+
+<div class="popup-container" id="popup">
+  <p>Are you sure you want to proceed?</p>
+  <div class="popup-buttons">
+    <button id="confirmYes">Yes</button>
+    <button id="confirmNo">No</button>
+  </div>
+</div>
 <div class="container">
   <main>
     <div class="py-5 text-center">
@@ -279,7 +305,7 @@
 
           <hr class="my-4">
 
-          <button class="w-100 btn btn-primary btn-lg" type="submit">Place Order</button>
+          <button class="w-100 btn btn-primary btn-lg" id="showPopup" type="submit">Place Order</button>
         </form>
       </div>
     </div>
@@ -287,30 +313,38 @@
 
 
 </div>
-    <div class="container">
-    <nav class="navbar navbar-expand-md navbar-light fixed-top" style="background-color: #CCA8E9;">
-      <a class="navbar-brand" href="https://homepage.siktaroy.repl.co/">Revival</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="https://homepage.siktaroy.repl.co/">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Help</a>
-          </li>
+  <div class="container">
+  <nav class="navbar navbar-expand-md navbar-light fixed-top" style="background-color: #CCA8E9;">
+    <a class="navbar-brand" href="#">
+      <img src="icon.png" alt="Revival Icon" class="mr-2"> Revival</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+      aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+          <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Video Consult </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="labtest.html">Lab Tests</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" href="medicine.html">Medicines</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+         <li class="nav-item">
+          <a class="nav-link" href="#">Doctor Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Patient Login</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
 
-        </ul>
-        <form class="form-inline mt-2 mt-md-0">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="button" href="https://homepage.siktaroy.repl.co/">Log Out</button>
-
-        </form>
-      </div>
-    </nav>
-  </div>
 <section id="contact" class="gradient-background">
     <div class="container ">
       <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 mt-5 border-top">
@@ -362,5 +396,25 @@
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
     crossorigin="anonymous"></script>
+   <script>
+  const showPopupButton = document.getElementById("showPopup");
+  const popup = document.getElementById("popup");
+  const confirmYesButton = document.getElementById("confirmYes");
+  const confirmNoButton = document.getElementById("confirmNo");
+
+  showPopupButton.addEventListener("click", () => {
+    popup.style.display = "block";
+  });
+
+  confirmYesButton.addEventListener("click", () => {
+    // Place your action or function to proceed here
+    alert("Action confirmed!");
+    popup.style.display = "none";
+  });
+
+  confirmNoButton.addEventListener("click", () => {
+    popup.style.display = "none";
+  });
+</script>
  </body>
 </html>
