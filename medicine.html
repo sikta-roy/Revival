@@ -10,71 +10,6 @@
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   <link href="medicine.css" rel="stylesheet" type="text/css" />
-  <style>
-
-    .popup-container {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    border: 1px solid #ccc;
-    padding: 20px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  .popup-buttons {
-    margin-top: 10px;
-    text-align: center;
-  }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-
-      .b-example-divider {
-        width: 100%;
-        height: 3rem;
-        background-color: rgba(0, 0, 0, .1);
-        border: solid rgba(0, 0, 0, .15);
-        border-width: 1px 0;
-        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-      }
-
-      .b-example-vr {
-        flex-shrink: 0;
-        width: 1.5rem;
-        height: 100vh;
-      }
-
-      .bi {
-        vertical-align: -.125em;
-        fill: currentColor;
-      }
-
-      .nav-scroller {
-        position: relative;
-        z-index: 2;
-        height: 2.75rem;
-        overflow-y: hidden;
-      }
-
-      .nav-scroller .nav {
-        display: flex;
-        flex-wrap: nowrap;
-        padding-bottom: 1rem;
-        margin-top: -1px;
-        overflow-x: auto;
-        text-align: center;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
-      }
-
-      
-      }
-    </style>
 </head>
 
 
@@ -305,7 +240,8 @@
 
           <hr class="my-4">
 
-          <button class="w-100 btn btn-primary btn-lg" id="showPopup" type="submit">Place Order</button>
+          <button class="w-100 btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#modalChoice" type="button" >Place Order</button>
+
         </form>
       </div>
     </div>
@@ -324,7 +260,7 @@
     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
           <ul class="navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Video Consult </a>
+          <a class="nav-link" href="m1.html">Video Consult </a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="labtest.html">Lab Tests</a>
@@ -345,6 +281,33 @@
   </nav>
 </div>
 
+
+
+ <div class="modal fade" id="modalChoice" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-body p-2 text-center">
+                    <h5 class="mb-0">Confirm Order</h5> </div>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      
+      </div>
+      <div class="modal-body p-4 text-center">
+         <p class="mb-0">Are you sure you want to proceed with ordering these medicines?"</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button"
+                        class="btn btn-lg btn-link fs-6 text-decoration-none col-6 m-0 rounded-0"
+                        data-bs-dismiss="modal">No</button>
+         <button type="button"
+                        class="btn btn-lg btn-link fs-6 text-decoration-none col-6 m-0 rounded-0 border-end"
+                        id="confirmYes"><strong>Yes</strong></button>
+      </div>
+    </div>
+  </div>
+</div>
 <section id="contact" class="gradient-background">
     <div class="container ">
       <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 mt-5 border-top">
@@ -390,31 +353,9 @@
   </section>
 
 
-
-
-    <script src="checkout.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
     crossorigin="anonymous"></script>
-   <script>
-  const showPopupButton = document.getElementById("showPopup");
-  const popup = document.getElementById("popup");
-  const confirmYesButton = document.getElementById("confirmYes");
-  const confirmNoButton = document.getElementById("confirmNo");
 
-  showPopupButton.addEventListener("click", () => {
-    popup.style.display = "block";
-  });
-
-  confirmYesButton.addEventListener("click", () => {
-    // Place your action or function to proceed here
-    alert("Action confirmed!");
-    popup.style.display = "none";
-  });
-
-  confirmNoButton.addEventListener("click", () => {
-    popup.style.display = "none";
-  });
-</script>
  </body>
 </html>
