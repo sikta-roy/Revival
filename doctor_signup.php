@@ -26,3 +26,4 @@ if($result['status'] == "success"){
    $_SESSION['error'] = $result['message'];
    header("location: patient_signup.html");
 }
+
