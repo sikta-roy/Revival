@@ -91,9 +91,35 @@
       <!-- Add more test options here -->
     </select>
     
-     <button type="button" id="bookTestButton">Book Test</button>
+     <button1 type="button" id="bookTestButton" data-bs-toggle="modal" data-bs-target="#modalChoice">Book Test</button1>
+   
   </form>
  </div>
+   <div class="modal fade" id="modalChoice" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-body p-2 text-center">
+                    <h5 class="mb-0">Confirm Booking</h5> </div>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      
+      </div>
+      <div class="modal-body p-4 text-center">
+         <p class="mb-0">Are you sure you want to proceed with this Booking?"</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button"
+                        class="btn btn-lg btn-link fs-6 text-decoration-none col-6 m-0 rounded-0"
+                        data-bs-dismiss="modal">No</button>
+         <button type="button"
+                        class="btn btn-lg btn-link fs-6 text-decoration-none col-6 m-0 rounded-0 border-end"
+                        id="confirmYes"><strong>Yes</strong></button>
+      </div>
+    </div>
+  </div>
+</div>
   
   <!-- FOOTER -->
 
