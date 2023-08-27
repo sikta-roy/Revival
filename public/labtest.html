@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="icon" href="favicon2.ico" type="image/x-icon">
+
+  <title>Lab Tests</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link href="labtest.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+ <header>
+
+    <div class="container">
+      <nav class="navbar navbar-expand-md navbar-light fixed-top" style="background-color: #CCA8E9;">
+        <a class="navbar-brand" href="#">
+          <img src="icon.png" alt="Revival Icon" class="mr-2" href="index.html">  Revival</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Video Consult </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="labtest.html">Lab Tests</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="medicine.html">Medicines</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="doctorlogin.html">Doctor Login</a>
+            </li>
+             <li class="nav-item">
+              <a class="nav-link" href="patient_login.html">Patient Login</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  
+  <section class="hero">
+    <h1>Lab Tests</h1>
+    <p>Convenient | Accurate | Pocket-friendly</p>
+  </section>
+  
+  
+
+
+   <div class="py-5 text-center">
+      <h2>Book a Test</h2>
+      <p class="lead">Please fill the form carefully least you should face any issue later.</p>
+    </div>
+ <div class="form-container">
+<form id="labBookingForm">
+    <label for="fullName" class="form-label">Full Name :</label>
+    <input type="text" class="form-control"placeholder="Anindan Das " id="fullName" name="fullName" required>
+    <label for="phone" class="form-label">Phone No. :</label>
+    <input type="text" class="form-control" placeholder="00000 00000"id="phone" name="phone" required>
+    <label for="email" class="form-label">Email :</label>
+    <input type="text" class="form-control" placeholder="yourmail@mail.com " id="email" name="email" required>
+<label for="address" class="form-label" >Address :</label>
+                <textarea name="address" class="form-control" placeholder="1234 Main St " cols="53" rows="5"></textarea>
+   
+    <label for="testType">Test :</label>
+    <select id="testType" name="testType" required>
+       <option value="..."> ... </option>
+      <option value="Basic metabolic panel">Basic metabolic panel</option>
+      <option value="Bilirubin Direct">Bilirubin Direct</option>
+      <option value="Cholesterol Total">Cholesterol Total</option>
+     <option value="Complete blood count">Complete blood count</option>
+      <option value="Comprehensive metabolic panel">Comprehensive metabolic panel</option>
+      <option value="Hepatitis">Hepatitis C</option>
+      <option value="Herpes">Herpes</option>
+      <option value="Lipid panel">Lipid panel</option>
+      <option value="Sugar Fasting">Sugar Fasting</option>
+      <option value="Sugar PP">Sugar PP</option>
+      <option value="Syphilis">Syphilis</option>
+      <option value="Thyroid panel">Thyroid panel</option>
+      <option value="Urea Blood">Urea Blood</option>
+       <option value="Other">Other</option>
+      <!-- Add more test options here -->
+    </select>
+    
+     <button1 type="button" id="bookTestButton" data-bs-toggle="modal" data-bs-target="#modalChoice">Book Test</button1>
+   
+  </form>
+ </div>
+   <div class="modal fade" id="modalChoice" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-body p-2 text-center">
+                    <h5 class="mb-0">Confirm Booking</h5> </div>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      
+      </div>
+      <div class="modal-body p-4 text-center">
+         <p class="mb-0">Are you sure you want to proceed with this Booking?"</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button"
+                        class="btn btn-lg btn-link fs-6 text-decoration-none col-6 m-0 rounded-0"
+                        data-bs-dismiss="modal">No</button>
+         <button type="button"
+                        class="btn btn-lg btn-link fs-6 text-decoration-none col-6 m-0 rounded-0 border-end"
+                        id="confirmYes"><strong>Yes</strong></button>
+      </div>
+    </div>
+  </div>
+</div>
+  
+  <!-- FOOTER -->
+
+  <section id="contact" class="gradient-background">
+    <div class="container ">
+      <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 mt-5 border-top">
+        <div class="col mb-3">
+
+          <p class="text-body-secondary">&copy;2023, Revival.</p>
+          <p class="text-body-secondary"><a href="#">Privacy</a> &middot; <a href="#">Contact Us</a></p>
+          <p class="float-right"><a href="#">Back to Top</a></p>
+        </div>
+
+        <div class="col mb-3">
+
+        </div>
+
+        <div class="col mb-3">
+          <h5>Consult</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+          </ul>
+        </div>
+
+        <div class="col mb-3">
+          <h5>Lab Tests</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+          </ul>
+        </div>
+
+        <div class="col mb-3">
+          <h5>Medicines</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+  </section>
+
+
+
+  <script src="lab.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
