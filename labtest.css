@@ -108,7 +108,7 @@ label {
 
 input[type="text"],
 select,
-button {
+button1 {
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
@@ -116,15 +116,16 @@ button {
   border-radius: 3px;
 }
 
-button {
+button1 {
   background-color: #4CAF50;
   color: white;
   border: none;
   cursor: pointer;
+   text-align: center;
 }
 
-button:hover {
-  background-color: #45a049;
+button1:hover {
+  background-color: #CCA8E9;
 }
 
 footer {
