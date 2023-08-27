@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$url = "https://script.google.com/macros/s/AKfycbx9EHBqNvic2YtWPVwrDGcnhFCiOz552jIRbDAwRjAlLTGHUJWfkOo9z2D1VSROpxrdAw/exec";
+$url = "https://script.google.com/macros/s/AKfycbx6KZZhawAdVWCEYEuvFYLvQkj8g2bxFI7xHu06LNsNqzGJvsxq52HjpYvZJo_qvJAM/exec";
 $postData = [
    "action" => "login",
    "email" => $_POST['email'],
@@ -20,9 +20,9 @@ $result = json_decode($result, 1);
 
 if($result['status'] == "success"){
    $_SESSION['user'] = $result['data'];
-   header("location: patient_index.html");
+   header("location: doctor_index.html");
 }else{
    $_SESSION['error'] = $result['message'];
-   header("location: patient_login.html");
+   header("location: doctor_login.html");
 }
 

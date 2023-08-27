@@ -1,12 +1,14 @@
 <?php
 session_start();
 
-$url = "https://script.google.com/macros/s/AKfycbx9EHBqNvic2YtWPVwrDGcnhFCiOz552jIRbDAwRjAlLTGHUJWfkOo9z2D1VSROpxrdAw/exec";
+$url = "https://script.google.com/macros/s/AKfycbx6KZZhawAdVWCEYEuvFYLvQkj8g2bxFI7xHu06LNsNqzGJvsxq52HjpYvZJo_qvJAM/exec";
 $postData = [
    "action" => "signup",
    "name" => $_POST['name'],
    "email" => $_POST['email'],
-   "password" => $_POST['password']
+   "password" => $_POST['password'],
+   "degree" => $_POST['degree'],
+   "experience" => $_POST['experience']
 ];
 
 $ch = curl_init($url);
@@ -21,8 +23,9 @@ $result = json_decode($result, 1);
 
 if($result['status'] == "success"){
    $_SESSION['success'] = "Signup successfully, please login";
-   header("location: patient_login.html");
+   header("location: doctor_login.html");
 }else{
    $_SESSION['error'] = $result['message'];
-   header("location: patient_signup.html");
+   header("location: doctor_signup.html");
 }
+
